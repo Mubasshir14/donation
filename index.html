@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="favicon.ico" type="/assets/logo.png">
+    <!-- tailwind and css -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/6d4eb52877.js" crossorigin="anonymous"></script>
+
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+    </style>
+</head>
+
+<body class="container mx-auto lg:px-24 px-8 font-mono bg-purple-200/65">
+
+    <header id="/" class="border-b-2 border-purple-950">
+        <div class="flex items-center justify-between container mx-auto  py-3 bg-transparent">
+            <div>
+                <h1 class="text-purple-700 text-2xl font-mono font-extrabold">Hope</h1>
+            </div>
+            <div>
+                <!-- Desktop Menu -->
+                <ul id="nav-menu" class="hidden md:flex justify-between gap-8 items-center list-none text-gray-800">
+                    <!-- <li onclick="scrollToSection('header')" class="hover:border-b-2 hover:border-pink-600 transition duration-500 ease-in-out"></li> -->
+                    <li onclick="scrollToSection('about')"
+                        class="hover:border-b-2 hover:border-purple-600 transition duration-500 ease-in-out">About</li>
+                    <li onclick="scrollToSection('campaings')"
+                        class="hover:border-b-2 hover:border-purple-600 transition duration-500 ease-in-out">Campaings
+                    </li>
+                    <li onclick="scrollToSection('team')"
+                        class="hover:border-b-2 hover:border-purple-600 transition duration-500 ease-in-out">Get
+                        Involved
+                    </li>
+                    <li onclick="scrollToSection('community')"
+                        class="hover:border-b-2 hover:border-purple-600 transition duration-500 ease-in-out">Community
+                    </li>
+                    <li>
+                        <div>
+                            <button onclick="scrollToSection('donate')"
+                                class="hidden md:block btn border-0 text-white font-bold capitalize transition-colors duration-300 transform bg-purple-600 rounded-md lg:w-auto hover:bg-purple-500 focus:outline-none focus:bg-purple-500">
+                                Donate
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center justify-end">
+                    <button class="text-gray-800" id="mobile-menu-button">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden flex flex-col gap-4 bg-gray-900 text-white p-4">
+            <!-- <a href="#header" onclick="toggleMenu()">Home</a> -->
+            <a href="#about" onclick="toggleMenu()">About</a>
+            <a href="#campaings" onclick="toggleMenu()">Campaings</a>
+            <a href="#team" onclick="toggleMenu()">Get Involved</a>
+            <a href="#community" onclick="toggleMenu()">Community</a>
+            <a href="#donate" onclick="toggleMenu()"
+                class="btn border-0 text-white font-bold capitalize transition-colors duration-300 transform bg-purple-600 rounded-md lg:w-auto hover:bg-purple-500 focus:outline-none focus:bg-purple-500">Donate</a>
+
+        </div>
+    </header>
+
+    <!-- banner -->
+    <section class="mt-6 mb-16">
+        <div class="flex items-center justify-center">
+            <h1 class="lg:text-6xl text-4xl font-bold text-center mb-4">Empowering Communities, <br> Transform Futures
+            </h1>
+        </div>
+        <div class="flex items-center justify-center">
+            <img src="/assets/frame226.png" alt="">
+        </div>
+    </section>
+
+
+    <!-- what we do -->
+    <section id="campaings">
+        <div class="flex flex-col items-center justify-center space-y-3">
+            <p class="text-purple-700">What we do</p>
+            <h1 class="lg:text-4xl text-2xl font-bold">Making a Difference, <br>
+                One Life at a Time.</h1>
+            <p class="text-gray-500 md:w-1/2 text-center">At Hope, we are dedicated to uplifting communities through a
+                range of targeted initiatives. Our focus
+                areas include</p>
+        </div>
+        <header class="">
+            <div
+                class="container flex flex-col-reverse px-6 py-10 mx-auto space-y-4 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center">
+                <div class="w-full lg:w-1/2 space-y-3">
+                    <div class="lg:max-w-lg">
+                        <h1 class="text-3xl font-semibold  text-gray-800 dark:text-white lg:text-3xl">Education
+                            Empowerment</h1>
+                        <p class="mt-2 text-gray-600 dark:text-gray-300">Providing resources and support to ensure every
+                            child has access to quality education.</p>
+                    </div>
+                    <div class="lg:max-w-lg">
+                        <h1 class="text-3xl font-semibold text-gray-800 dark:text-white lg:text-3xl">Health and Wellness
+                        </h1>
+                        <p class="mt-2 text-gray-600 dark:text-gray-300">Delivering healthcare services and promoting
+                            healthy living in underserved areas.</p>
+                    </div>
+                    <div class="lg:max-w-lg">
+                        <h1 class="text-3xl font-semibold  text-gray-800 dark:text-white lg:text-3xl">Economic
+                            Development</h1>
+                        <p class="mt-2 text-gray-600 dark:text-gray-300">Creating opportunities for sustainable income
+                            and self-sufficiency through vocational training and micro-financing.</p>
+                    </div>
+                    <div class="lg:max-w-lg">
+                        <h1 class="text-3xl font-semibold  text-gray-800 dark:text-white lg:text-3xl">Environmental
+                            Stewardship</h1>
+                        <p class="mt-2 text-gray-600 dark:text-gray-300">Protecting our planet by promoting sustainable
+                            practices and fostering environmental awareness.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center w-full h-96 lg:w-1/2">
+                    <img class="object-cover w-full h-full max-w-2xl rounded-md" src="/assets/Image.png"
+                        alt="glasses photo">
+                </div>
+            </div>
+        </header>
+    </section>
+
+    <!-- about us -->
+    <section id="about" class="mt-6 mb-12">
+        <div class="flex flex-col items-center justify-center space-y-3">
+            <p class="text-purple-700">About Us</p>
+            <h1 class="lg:text-4xl text-2xl font-bold">A Future Filled with Hope</h1>
+            <p class="text-gray-500 md:w-1/2 text-center">At Hope, we are dedicated to uplifting communities through a
+                range of targeted initiatives</p>
+        </div>
+        <header class="mt-4">
+            <div class="w-full bg-center bg-cover lg:h-[400px] rounded-xl"
+                style="background-image: url('/assets/Content.png');">
+                <div class="flex items-center justify-center w-full h-full  rounded-xl p-5">
+                    <div class="items-center text-center flex flex-col lg:flex-row justify-around gap-6  ">
+                        <div class="bg-white/85 p-5 rounded-xl">
+                            <h1 class="text-black font-bold text-2xl">Our Mission</h1>
+                            <p class="text-gray-500">Our mission is to empower individuals and communities by providing
+                                the tools and support they need to overcome challenges and achieve their fullest
+                                potential through collaborative efforts.</p>
+                        </div>
+                        <div class="bg-white/85 p-5 rounded-xl">
+                            <h1 class="text-black font-bold text-2xl">Our Vision</h1>
+                            <p class="text-gray-500">Our vision is a world where every individual, regardless of their
+                                background or circumstances has the opportunity to thrive. We envision communities that
+                                are resilient, self-reliant, and full of promise.</p>
+                        </div>
+                        <div class="bg-white/85 p-5 rounded-xl">
+                            <h1 class="text-black font-bold text-2xl">Global MOvement</h1>
+                            <p class="text-gray-500">We envision a global movement where compassion and empathy drive
+                                action, where the barriers of inequality and injustice are dismantled, and where hope is
+                                not just a fleeting sentiment but a tangible reality. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </section>
+
+    <!-- community -->
+    <section class="mt-12 mb-12">
+        <div class="flex flex-col items-center justify-center space-y-3">
+
+            <h1 class="lg:text-4xl text-2xl font-bold">Friends, Family and Community</h1>
+        </div>
+        <header class="">
+            <div
+                class="container flex flex-col-reverse px-6 py-10 mx-auto space-y-4 gap-5 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center">
+                <div class="w-full lg:w-1/2 space-y-3">
+                    <div class="lg:max-w-lg">
+                        <h1 class="text-3xl font-semibold  text-gray-800 dark:text-white lg:text-3xl">The Journey of
+                            Hope</h1>
+                        <p class="mt-2 text-gray-600 dark:text-gray-300">
+                        <div class="mb-2">
+                            Hope was born out of a deep-seated belief that every life holds immense value and potential.
+                            Founded in 2022, our organization began with a small group of passionate individuals
+                            determined to make a difference. From humble beginnings, we have grown into a network of
+                            dedicated volunteers, supporters, and partners, all united by a common goal: to bring hope
+                            to those who need it most.
+                        </div>
+                        <!-- <div class="mb-2">
+
+                            Our journey has been marked by countless stories of transformation and triumph. From a child who received a scholarship and became the first in their family to attend college, to communities that have blossomed through our sustainable farming programs – these successes fuel our commitment to continue our work with unwavering dedication.
+                            We invite you to be a part of our story. </div> -->
+
+                        <div>
+                            Together, we can turn the tide and create a world where hope is a reality for everyone.
+                        </div>
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="flex items-center justify-center w-full h-96 lg:w-1/2">
+                    <img class="object-cover w-full h-full lg:max-w-2xl rounded-md" src="/assets/hand.png"
+                        alt="glasses photo">
+                </div>
+            </div>
+        </header>
+    </section>
+
+
+    <!-- team -->
+    <section id="team" class="mt-6 mb-12">
+        <section class="">
+            <div class="container px-6 py-10 mx-auto">
+                <h1 class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">
+                    Teams
+                </h1>
+
+
+                <div class="grid grid-cols-1 gap-8 mx-auto mt-8 lg:grid-cols-2 xl:mt-10 max-w-7xl">
+                    <div class="p-6 bg-gray-100 rounded-lg dark:bg-gray-800 md:p-8">
+                        <p class="leading-loose text-gray-500 dark:text-gray-300">
+                            “Emma Johnson founded Hope in 2023 and has over 20 years of nonprofit experience. Her
+                            passion for education and health drives Hope’s mission, inspiring the team with her
+                            leadership and dedication to making a difference.”.
+                        </p>
+
+                        <div class="flex items-center mt-6">
+                            <img class="object-cover rounded-full w-14 h-14"
+                                src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                                alt="">
+
+                            <div class="mx-4">
+                                <h1 class="font-semibold text-blue-500">Emma Johnson</h1>
+                                <span class="text-sm text-gray-500 dark:text-gray-300">Founder & Executive
+                                    Director</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-gray-100 rounded-lg dark:bg-gray-800 md:p-8">
+                        <p class="leading-loose text-gray-500 dark:text-gray-300">
+                            “Michael Ramirez, with a background in social work and public health, oversees all of Hope’s
+                            initiatives. His strategic planning and compassionate approach ensure our programs
+                            effectively meet community needs.”.
+                        </p>
+
+                        <div class="flex items-center mt-6">
+                            <img class="object-cover rounded-full w-14 h-14"
+                                src="https://images.unsplash.com/photo-1499470932971-a90681ce8530?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                                alt="">
+
+                            <div class="mx-4">
+                                <h1 class="font-semibold text-blue-500">Michael Ramirez</h1>
+                                <span class="text-sm text-gray-500 dark:text-gray-300">Director of Programs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-gray-100 rounded-lg dark:bg-gray-800 md:p-8">
+                        <p class="leading-loose text-gray-500 dark:text-gray-300">
+                            “Sophia Lee designs and leads our education programs. With over a decade of teaching
+                            experience, she is committed to providing quality education and creating opportunities for
+                            children to thrive.”.
+                        </p>
+
+                        <div class="flex items-center mt-6">
+                            <img class="object-cover rounded-full w-14 h-14"
+                                src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                                alt="">
+
+                            <div class="mx-4">
+                                <h1 class="font-semibold text-blue-500">Sophia Lee</h1>
+                                <span class="text-sm text-gray-500 dark:text-gray-300">Head of Education
+                                    Initiatives</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-gray-100 rounded-lg dark:bg-gray-800 md:p-8">
+                        <p class="leading-loose text-gray-500 dark:text-gray-300">
+                            “Dora Thompson manages our health and wellness programs. With a background in nursing and
+                            public health, he focuses on improving health outcomes and promoting preventive care in
+                            underserved communities.”.
+                        </p>
+
+                        <div class="flex items-center mt-6">
+                            <img class="object-cover rounded-full w-14 h-14"
+                                src="https://images.unsplash.com/photo-1499470932971-a90681ce8530?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                                alt="">
+
+                            <div class="mx-4">
+                                <h1 class="font-semibold text-blue-500">Dora Thompson</h1>
+                                <span class="text-sm text-gray-500 dark:text-gray-300">Community Health
+                                    Coordinator</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- voice -->
+    <section id="community" class="mt-6 mb-12>
+        <section class=" p-6">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-4xl font-bold text-center mb-10">Voices of Hope</h1>
+            <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img class="w-16 h-16 rounded-full mx-auto mb-4" src="/assets/1.png" alt="Maria's photo">
+                    <p class="text-gray-600 text-center">"Hope has given my community the resources we needed to
+                        build a better future. Through their educational programs, my children now have
+                        opportunities I could only dream of. The difference in our lives is beyond words."</p>
+                    <p class="text-center mt-4 font-bold">Maria, Community Member</p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img class="w-16 h-16 rounded-full mx-auto mb-4" src="/assets/2.png" alt="John's photo">
+                    <p class="text-gray-600 text-center">"Volunteering with Hope has been a life-changing
+                        experience. Seeing the direct impact of our work on people's lives is incredibly rewarding."
+                    </p>
+                    <p class="text-center mt-4 font-bold">John, Volunteer</p>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img class="w-16 h-16 rounded-full mx-auto mb-4" src="/assets/3.png" alt="Sarah's photo">
+                    <p class="text-gray-600 text-center">"As a corporate partner, collaborating with Hope has been
+                        incredibly fulfilling. Their transparency, dedication, and impactful programs make it easy
+                        to support their mission. We are proud to contribute to a cause that truly transforms
+                        lives."</p>
+                    <p class="text-center mt-4 font-bold">Sarah, Corporate Partner</p>
+                </div>
+                <!-- Testimonial 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img class="w-16 h-16 rounded-full mx-auto mb-4" src="/assets/2.png" alt="Raj's photo">
+                    <p class="text-gray-600 text-center">"Hope's micro-financing program has been a game-changer for
+                        our community. Small loans have allowed us to start businesses and improve our economic
+                        stability. We are now more self-reliant and optimistic about our future."</p>
+                    <p class="text-center mt-4 font-bold">Raj, Entrepreneur</p>
+                </div>
+                <!-- Testimonial 5 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img class="w-16 h-16 rounded-full mx-auto mb-4" src="/assets/3.png" alt="David's photo">
+                    <p class="text-gray-600 text-center">"Hope's healthcare initiatives have transformed our
+                        community's well-being. Access to regular medical check-ups and health education has
+                        drastically improved our quality of life. We are healthier and more informed, thanks to
+                        their tireless efforts."</p>
+                    <p class="text-center mt-4 font-bold">Tuna, Beneficiary</p>
+                </div>
+                <!-- Testimonial 6 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img class="w-16 h-16 rounded-full mx-auto mb-4" src="/assets/6.png" alt="Amina's photo">
+                    <p class="text-gray-600 text-center">"Participating in Hope's vocational training program has
+                        given me the skills and confidence to start my own business. I am now able to provide for my
+                        family and contribute to my community. Hope has truly changed my life."</p>
+                    <p class="text-center mt-4 font-bold">Amina, Program Participant</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+
+    <!-- donation -->
+    <div id="donate" class="lg:px-8">
+        <div 
+        class="lg:px-6 my-12 w-full bg-center bg-cover lg:h-[400px] rounded-xl flex items-center justify-center"
+        style="background-image: url('/assets/Frame245.png');">
+        <section class="bg-white/50 p-6 shadow-md rounded-lg text-center w-full max-w-3xl">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold mb-6">Support Our Cause</h2>
+                <p class=" mb-4">Your donations help us to continue our mission and make a positive impact
+                    in the community.</p>
+                <div class="bg-gray-100 p-6 rounded-lg inline-block">
+                    <p class="text-gray-800 font-bold">Bank Account Details</p>
+                    <p class="text-gray-600">Bank Name: Example Bank</p>
+                    <p class="text-gray-600">Account Number: 123456789</p>
+                    <p class="text-gray-600">SWIFT Code: EXAMPLBIC</p>
+                    <p class="text-gray-600">IBAN: EX12345678901234567890</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    </div>
+
+    <!-- gallery -->
+    <section class="my-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="fade-in"><img src="/assets/Frame234.png" alt=""
+                        class="w-full h-auto hover:scale-105 transition-all duration-1000 "></div>
+                <div class="fade-in"><img src="/assets/Frame237.png" alt=""
+                        class="w-full h-auto hover:scale-105 transition-all duration-1000 "></div>
+                <div class="fade-in"><img src="/assets/Frame235.png" alt=""
+                        class="w-full h-auto hover:scale-105 transition-all duration-1000 "></div>
+                <div class="fade-in"><img src="/assets/Frame242.png" alt=""
+                        class="w-full h-auto hover:scale-105 transition-all duration-1000 "></div>
+                <div class="fade-in"><img src="/assets/Frame245.png" alt=""
+                        class="w-full h-auto hover:scale-105 transition-all duration-1000 "></div>
+                <div class="fade-in"><img src="/assets/Frame246.png" alt=""
+                        class="w-full h-auto hover:scale-105 transition-all duration-1000 "></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-black">
+        <div class="container px-6 py-8 mx-auto">
+            <div class="flex flex-col items-center text-center">
+                <a href="#/" onclick="toggleMenu()">
+                    <h1 class="text-purple-700 text-2xl font-mono font-extrabold">Hope</h1>
+                </a>
+
+                <div class="flex flex-wrap justify-center mt-6 -mx-4">
+                    <a href="#about" onclick="toggleMenu()"
+                        class="mx-4 text-sm text-white transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
+                        aria-label="Reddit"> Home </a>
+
+                    <a href="#about" onclick="toggleMenu()"
+                        class="mx-4 text-sm text-white transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
+                        aria-label="Reddit"> About Us </a>
+
+                    <a href="#campaings" onclick="toggleMenu()"
+                        class="mx-4 text-sm text-white transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
+                        aria-label="Reddit"> Campaings </a>
+
+                    <a href="#team" onclick="toggleMenu()"
+                        class="mx-4 text-sm text-white transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
+                        aria-label="Reddit"> Get Involved </a>
+
+                    <a href="#community" onclick="toggleMenu()"
+                        class="mx-4 text-sm text-white transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
+                        aria-label="Reddit"> Community </a>
+
+                </div>
+
+            </div>
+
+            <hr class="my-6 border-gray-200 md:my-10 dark:border-gray-700" />
+
+            <div class="flex flex-col items-center sm:flex-row sm:justify-between">
+                <p class="text-sm text-white dark:text-gray-300">© Copyright 2021. All Rights Reserved.</p>
+
+                <div class="flex -mx-2 gap-2">
+                    <button onclick="scrollToSection('/')" id="top"
+                        class=" bg-purple-600 rounded-md lg:w-auto hover:bg-purple-500 focus:outline-none focus:bg-purple-500 text-white py-2 px-4 "><i class="fa-solid fa-arrow-up"></i></button>
+
+                        <button onclick="scrollToSection('donate')"
+                        class="hidden md:block btn border-0 text-white font-bold capitalize transition-colors duration-300 transform bg-purple-600 rounded-md lg:w-auto hover:bg-purple-500 focus:outline-none focus:bg-purple-500">
+                        Donate
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
